@@ -1,0 +1,12 @@
+<div class="form_item_block">
+    <label>Engine:<span class="asterisk">*</span></label>
+    <select ng-model="engine_type" ng-required="true" >
+        <option value="powershell">PowerShell</option>
+        <option value="pwsh">PowerShell Core</option>
+        <option value="onescript">OneScript</option>
+    </select>
+    <label>Script:<span class="asterisk">*</span></label>
+    <textarea ng-model="script" ng-required="true" rows="20" cols="60"></textarea>
+    <span class="form_error" ng-show="GOINPUTNAME[script].$error.server">{{ GOINPUTNAME[script].$error.server }}</span>
+    <span class="form_error" ng-show="GOINPUTNAME[engine_type].$error.server">{{ GOINPUTNAME[engine_type].$error.server }}</span>
+</div>
